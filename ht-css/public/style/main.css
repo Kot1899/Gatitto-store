@@ -1,0 +1,153 @@
+.dress-main {
+    width: 350px;
+    margin-right: 130px;
+    float: right;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 175px 175px 0 0;
+}
+.picture-top {
+    width: 200px;
+    height: 50px;
+    margin-left: 150px;
+    display: inline-block;
+}
+.my-sm-2 {
+    display: inline-block;
+}
+.btn-outline-success {
+    width: 70px;
+}
+.header-text {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    margin-left: 300px;
+    font-size: 70px;
+
+}
+.main-text {
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    margin-left: 150px;
+    font-size: large;
+    line-height: 2;
+    color: black;
+    font-weight: lighter;
+}
+.navbar {
+    float: none;
+    display: block;
+}
+* {
+    background-color: floralwhite;
+}
+.collection-dress {
+    width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    margin-left: 130px;
+}
+.top {
+    display: inline-block;
+}
+.d-flex {
+    width: 200px;
+    display: inline-block;
+}
+.header-links {
+    display: inline-block;
+    align-items: center;
+}
+.text {
+    color: dimgray;
+    line-height: 1.5;
+    font-size: medium;
+}
+header {
+    display: flex; /* Включаем режим Flexbox. */
+    flex-direction: row; /* Держим элементы в строке */
+    justify-content: space-between; /* Распределяем элементы внутри шапки */
+    flex-wrap: wrap; /* Разрешаем перенос элементов на новую строку */
+    margin-right: 100px;
+}
+.two-pictures {
+    width: 800px;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.dress-main-1 {
+    width: 350px;
+    margin-right: 130px;
+    float: left;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 0 500px 0 0;
+    z-index: 2;
+}
+.oval {
+    width: 600px;
+    height: 80px;
+    border-radius: 100px/50px;
+    transform: rotate(-50deg);
+    margin-left: 50px;
+    z-index: -1;
+    border: 2px solid black;
+    position:absolute;
+    margin-top: 0;
+}
+.right-text {
+    margin-right: 150px;
+    line-height: 2;
+}
+.mini-picture {
+    width: 150px;
+    margin-left: 200px;
+}
+hr {
+    width: 200px;
+    color: black;
+    border-width: 3px;
+}
+.three-pic {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #000;
+    padding: 10px;
+    margin: 50px;
+}
+.dress-main-2 {
+    width: 350px;
+    margin-right: 50px;
+    float: right;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 400px 0 0 0;
+    margin-top: -100px;
+}
+.dress-left {
+    width: 350px;
+    margin-right: 130px;
+    float: left;
+    display: inline-block;
+    border: 3px solid black;
+    border-radius: 175px 175px 0 0;
+    padding: 10px;
+}
+.info {
+    margin-left: 1px;
+}
+.three-pic-2 {
+    float: right;
+    margin-right: 100px;
+}
+.two-pictures-2 {
+    margin-top: 50px;
+
+    float: right;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

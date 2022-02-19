@@ -1,0 +1,24 @@
+.card{
+    width: 32%;
+    margin: 7px;
+}
+.my-0{
+    text-align: center;
+}
+.gg-2{
+    margin: 7px;
+    font-size: 28px !important;
+    font-family: Roboto;
+    font-weight: bold;
+    color: black !important;
+}
+.px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.img-space {
+    margin: 12px;
+    position: relative;
+    top: 50% ;
+    right: -12%;
+}
