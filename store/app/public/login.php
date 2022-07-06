@@ -7,7 +7,7 @@
     <title>Sign in</title>
 </head>
 <body>
-<?php require 'block/header.html' ?>
+<?php require '../block/header.html' ?>
 <main class="modal-body p-5 pt-0">
     <form class="login-css" action="index.php" method="post">
         <div class="form-floating mb-3">
@@ -21,7 +21,7 @@
         <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
             </form>
 </main>
-<?php require 'block/footer.html' ?>
+<?php require '../block/footer.html' ?>
 <body>
 </html>
 

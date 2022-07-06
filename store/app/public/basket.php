@@ -7,7 +7,7 @@
     <title>Basket</title>
 </head>
 <body>
-<?php require 'block/header.html' ?>
+<?php require '../block/header.html' ?>
 <main class="container col-md-5 col-lg-4 order-md-last">
     <h4 class="d-flex justify-content-between align-items-center mb-3">
         <span class="text-primary">Your order</span>
@@ -29,7 +29,7 @@
     </ul>
     <button class="w-100 btn btn-primary btn-lg" type="submit">To checkout</button>
 </main>
-<?php require 'block/footer.html' ?>
+<?php require '../block/footer.html' ?>
 <body>
 </html>
 

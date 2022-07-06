@@ -66,7 +66,7 @@
     border-color: #0d6efd;
 }
 .login-css{
-    max-width: 400px;
+    max-width: 450px;
     padding-top: 50px;
     margin: auto;
 }
@@ -92,3 +92,7 @@
 .justify-content-between {
     justify-content: space-between !important;
 }
+
+.stb { text-indent: 1em; font-size: 20px;}
+.mtb { text-indent: 0; margin-top: 2.17em; font-size: 20px; }
+.ltb { text-indent: 0; margin-top: 3.08em;  font-size: 20px;}

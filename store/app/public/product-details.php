@@ -7,7 +7,7 @@
     <title>Product details</title>
 </head>
 <body>
-<?php require 'block/header.html' ?>
+<?php require '../block/header.html' ?>
 <main class="container col-md-6">
     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
@@ -22,6 +22,6 @@
         </div>
     </div>
 </main>
-<?php require 'block/footer.html' ?>
+<?php require '../block/footer.html' ?>
 <body>
 </html>
