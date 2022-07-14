@@ -9,14 +9,14 @@
 <body>
 <?php require '../block/header.html' ?>
 <main class="modal-body p-5 pt-0">
-    <form class="login-css" action="index.php" method="post">
+    <form class="login-css" action="checking.php" method="post">
         <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Login</label>
+            <input type="text" class="form-control rounded-4" name="Login" id="Login" placeholder="name@example.com">
+            <label for="Login">Login</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <input type="text" class="form-control rounded-4" name="Password" id="Password" placeholder="Password">
+            <label for="Password">Password</label>
         </div>
         <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
             </form>
