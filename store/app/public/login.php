@@ -19,7 +19,8 @@
             <label for="Password">Password</label>
         </div>
         <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
-            </form>
+        <a class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" href="form.php">Registration</a>
+    </form>
 </main>
 <?php require '../block/footer.html' ?>
 <body>

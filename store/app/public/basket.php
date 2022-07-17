@@ -30,6 +30,7 @@
     <button class="w-100 btn btn-primary btn-lg" type="submit">To checkout</button>
 </main>
 <?php require '../block/footer.html' ?>
+
 <body>
 </html>
 
