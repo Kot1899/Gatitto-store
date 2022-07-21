@@ -18,4 +18,3 @@ require_once(ROOT . '/../framework/components/Router.php');
 $router= new Router();
 $router->found();
 
-

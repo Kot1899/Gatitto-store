@@ -1,13 +1,15 @@
 <?php
 
 
-class Router {
+class Router
+{
 
     private $routes;
+
     public function __construct()
     {
-        $routesPath= ROOT.'/../framework/config/routes.php';
-        $this->routes= include ($routesPath);
+        $routesPath = ROOT . '/../framework/config/routes.php';
+        $this->routes = include($routesPath);
     }
 
     /**
@@ -16,46 +18,49 @@ class Router {
      */
     private function getUri()
     {
-        if(!empty($_SERVER['REQUEST_URI']))
-        {
-            return trim($_SERVER['REQUEST_URI'], '/');
-        }
+        if (!empty($_SERVER['REQUEST_URI'])) {
+        return trim($_SERVER['REQUEST_URI'], "/");
+    }
     }
 
     public function found()
     {
         //get uri
-        $uri=$this->getUri();
-//        echo $uri;   -for check
+        $uri = $this->getUri();
+        echo $uri;
+
 
 //check in routes
-        foreach ($this->routes as $uriPattern => $path)
-        {
+        foreach ($this->routes as $uriPattern => $path) {
             //check uri
-            if (preg_match("~$uriPattern~", $uri))
-            {
-                $segments = explode('/', $path);
-                $controllerName= array_shift($segments).'Controller';
-                $controllerName=ucfirst($controllerName);
-                $actionName='action'.ucfirst(array_shift($segments)); //create action
+            if (preg_match("~$uriPattern~", $uri)) {
 
-                echo $controllerName."<br>";
+
+                $segments = explode('/', $path);
+                $controllerName = array_shift($segments) . 'Controller';
+                $controllerName = ucfirst($controllerName);
+                $actionName = 'action' . ucfirst(array_shift($segments)); //create action
+
+                echo $controllerName . "<br>";
                 echo $actionName;
 
                 //connection my controller
-                $controllerFile=ROOT.'/../app/controllers'.$controllerName.'php';
+                $controllerFile = ROOT . '/../../app/controllers' . $controllerName . 'php';
 
-                if(file_exists($controllerFile)){
-                    include_once ($controllerFile);
+                if (file_exists($controllerFile)) {
+                    include_once($controllerFile);
                 }
 
                 //create obj and call method
-                $controllerObj=new $controllerName;
-                $result=$controllerObj->$actionName();
-                if($result=!null){
+                $controllerObj = new $controllerName;
+                $result = $controllerObj->$actionName();
+                if ($result = !null) {
                     break;
                 }
             }
         }
     }
 }
+
+
+echo 'hello test';

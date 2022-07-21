@@ -40,3 +40,15 @@ $string= 'apples and oranges 444555 5555 6852';
 $pattern= '*[0-5]+*'; //found any quantity of symbols in range 0-5
 $result= preg_match($pattern, $string);
 echo $result.'<br/>';
+
+
+//replacement
+$string= '21-11-2005';
+echo $string."\n";
+$pattern='/([0-3]{2})-([0-9]{2})-([0-9]{4})/';
+$replacement=' year $3, month $2, day $1';
+echo preg_replace($pattern,$replacement,$string)."\n";
+
+// month: 11, Day: 21, Year: 2015.
+$replacement=' Month: $2, Day $1, Year: $3.';
+echo preg_replace($pattern,$replacement,$string)."\n";

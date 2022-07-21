@@ -2,9 +2,15 @@
 
 class NewsController
 {
-    public function actionNews()
+    public function actionIndex()
     {
-        echo 'it is NewsController and actionNews';
+        echo 'it is list of News';
+        return true;
+    }
+
+    public function actionView()
+    {
+        echo 'it is shower of one News';
         return true;
     }
 }
