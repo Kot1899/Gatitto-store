@@ -7,9 +7,6 @@ try {
     $userCon='romanenko1';
     $passwordCon='123123';
     $dbh = new PDO($dsn,$userCon,$passwordCon);
-//    foreach ($dbh->query('SELECT * from registration') as $row) {
-//        print_r($row);
-//    }
     $dbh = null;
 } catch (PDOException $e) {
     print "Error!: " . $e->getMessage() . "<br/>";
@@ -29,8 +26,12 @@ $login=$_POST['Login'];
 $password=$_POST['Password'];
 
 //checking new-data with bd-data
-$sql="select * from registration where
-login='".$login."' and password='".$password."' ";
+//$sql="insert into registration (login, password)
+//    value ('$login', '$password')";
+//$stm=$connection->query($sql);
+//$stm->execute();
+
+$sql="select * from registration where login='".$login."' and password='".$password."' ";
 $stm=$connection->query($sql);
 $stm->execute();
 $list=$stm->fetchAll(PDO::FETCH_ASSOC);
@@ -45,6 +46,7 @@ if($loginMain==$login && $passwordMain==$password) {
     $list=null;
 }
 */
+
 
 if($list != null){
     $_SESSION['check']=true;

@@ -23,7 +23,7 @@
         </div>
         <div class="form-floating mb-3">
              <span>First name<br/>
-            <input type="text" class="form-control rounded-4" name="Firstname" id="Firstname" >
+            <input type="text" class="form-control rounded-4" name="Name" id="Name" >
              </span>
         </div>
         <div class="form-floating mb-3">
@@ -39,7 +39,7 @@
         </div>
         <div class="form-floating mb-3">
             <span>Age<br/>
-                <input type="text" class="form-control rounded-4" name="Age" id="Age" placeholder="18">
+                <input type="number" class="form-control rounded-4" name="Age" id="Age" placeholder="18">
             </span>
         </div>
 <!--        <a class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" href="login.php">Submit</a>-->
