@@ -9,7 +9,7 @@ class Router
     public function __construct()
     {
         $routesPath = ROOT . '/../framework/config/routes.php';
-        $this->routes = include($routesPath);
+           $this->routes = include($routesPath);
     }
 
     /**
@@ -27,7 +27,7 @@ class Router
     {
         //get uri
         $uri = $this->getUri();
-        echo $uri;
+        echo 'my route is - '.$uri.'<br>'.'<br>';
 
 
 //check in routes
@@ -35,32 +35,40 @@ class Router
             //check uri
             if (preg_match("~$uriPattern~", $uri)) {
 
+                //get inroute from outroute by my rules from route.php
+                $internalRoute=preg_replace("*$uriPattern*", $path, $uri);
+                    // echo 'internal route- '.$internalRoute. "<br>". "<br>";
 
-                $segments = explode('/', $path);
+                //set controller, action
+                $segments = explode('/', $internalRoute);
                 $controllerName = array_shift($segments) . 'Controller';
                 $controllerName = ucfirst($controllerName);
                 $actionName = 'action' . ucfirst(array_shift($segments)); //create action
-
-                echo $controllerName . "<br>";
-                echo $actionName;
+                $param=$segments;
+                                //echo 'controller which do now - '.$controllerName . "<br>";
+                    //echo 'action which do now - '.$actionName. "<br>". "<br>";
 
                 //connection my controller
-                $controllerFile = ROOT . '/../../app/controllers' . $controllerName . 'php';
+                $controllerFile =ROOT. '/../app/controllers/' . $controllerName . '.php';
 
                 if (file_exists($controllerFile)) {
                     include_once($controllerFile);
+                }else
+                {
+                    echo '<br>'.'Vitali, u do not  include your controller, was some problem';
                 }
 
                 //create obj and call method
                 $controllerObj = new $controllerName;
-                $result = $controllerObj->$actionName();
+                $result = call_user_func_array(array($controllerObj,$actionName), $param);
                 if ($result = !null) {
                     break;
                 }
+
             }
         }
     }
 }
 
 
-echo 'hello test';
+//echo 'hello test';

@@ -1,0 +1,98 @@
+.card{
+    width: 32%;
+    margin: 7px;
+}
+.my-0{
+    text-align: center;
+}
+.header-kot{
+    margin: 7px;
+    font-size: 28px !important;
+    font-family: Roboto;
+    font-weight: bold;
+    color: black !important;
+}
+.px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+.img-space {
+    margin: 12px;
+    position: relative;
+    top: 50% ;
+    right: -12%;
+}
+.img-det {
+    margin: 12px;
+    position: relative;
+    top: 0% ;
+    right: -12%;
+}
+.img-basket{
+    /*float: left;*/
+    margin: 0px;
+    /*position: relative;*/
+    /*top: 0% ;*/
+    /*right: 0%;*/
+}
+.stretched-link{
+    margin: 7px;
+    font-size: 24px !important;
+    font-family: Roboto;
+    font-weight: bold;
+}
+.btn2 {
+    display: inline-block;
+    font-weight: 40;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    /*background-color: transparent;*/
+    border: 1px solid #0d6efd;
+    padding: 8px 8px;
+    font-size: 2rem;
+    font-weight: bold;
+    max-width: 150px;
+    border-radius: .25rem;
+   }
+.btn2-outline-primary:hover {
+    color: #fff;
+    background-color:green !important;
+    border-color: #0d6efd;
+}
+.login-css{
+    max-width: 450px;
+    padding-top: 50px;
+    margin: auto;
+}
+.my-4545 {
+
+    text-align: left;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    right: +140px;
+}
+.text-descr {
+    position: relative;
+    right: +140px;
+  }
+.list-group-item {
+    position: relative;
+      color: #212529;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.125);
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.stb { text-indent: 1em; font-size: 20px;}
+.mtb { text-indent: 0; margin-top: 2.17em; font-size: 20px; }
+.ltb { text-indent: 0; margin-top: 3.08em;  font-size: 20px;}
