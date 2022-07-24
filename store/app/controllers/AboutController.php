@@ -1,35 +1,35 @@
 <?php
 
 // check attach file
-$checkInclude = ROOT.'/../app/models/News.php';
+$checkInclude = ROOT.'/../app/models/About.php';
     if(file_exists($checkInclude))
     {
         include_once ($checkInclude);
       }else
     {
-        echo '<br>'.'Vitali, file with modelNews was 
+        echo '<br>'.'Vitali, file with modelAbout was 
         not found and do not include'.'<br>';
     }
 
 /**
  * return data about news
  */
-class NewsController
+class AboutController
 {
     /**
      * return data about news
-     * @param $newList
+     * @param $AboutList
      */
     public function actionIndex()
     {
-        $newsList=array();
-        $newsList= News::getNewsList();
+        $aboutList=array();
+        $aboutList= About::getAboutList();
 
-        require_once (ROOT.'/../app/views/news/index.php');
+        require_once (ROOT.'/../app/views/about/index.php');
 
         return true;
     }
-
+/*
     public function actionView($id)
     {
         if($id){
@@ -39,5 +39,7 @@ class NewsController
 
         }
         return true;
+
     }
+*/
 }

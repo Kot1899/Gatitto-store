@@ -11,7 +11,7 @@ $path=(ROOT . '/../framework/config/db.php');
         echo '<br>'.'Vitali, file with DBPath was not found and do not include'.'<br>';
     }
 
-class News
+class About
 {
     /**
      * @param int $id
@@ -26,30 +26,27 @@ class News
      * return list of news
      */
 
-    public static function getNewsList()
+    public static function getAboutList()
     {
         //request to DB
         $connection= DataBase::getConnection();
 
-        $newsList=array();
+        $aboutList=array();
 
-        $stm='select id, title, date, short_content '
-            . ' from news'
-            .' ORDER BY id ASC'
-            .' LIMIT 2';
+        $stm='select id, title, description, footer from AboutPage where id=1';
 
         $result = $connection->query($stm);
 
         $i=0;
         while( $row =$result->fetch(PDO::FETCH_ASSOC))
         {
-            $newsList[$i]['id']=$row['id'];
-            $newsList[$i]['title']=$row['title'];
-            $newsList[$i]['date']=$row['date'];
-            $newsList[$i]['short_content']=$row['short_content'];
+            $aboutList[$i]['id']=$row['id'];
+            $aboutList[$i]['title']=$row['title'];
+            $aboutList[$i]['description']=$row['description'];
+            $aboutList[$i]['footer']=$row['footer'];
             $i++;
         }
-        return $newsList;
+        return $aboutList;
 
     }
 }

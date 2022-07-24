@@ -27,7 +27,7 @@ class Router
     {
         //get uri
         $uri = $this->getUri();
-        echo 'my route is - '.$uri.'<br>'.'<br>';
+//        echo 'my route is - '.$uri.'<br>'.'<br>';
 
 
 //check in routes
@@ -45,14 +45,15 @@ class Router
                 $controllerName = ucfirst($controllerName);
                 $actionName = 'action' . ucfirst(array_shift($segments)); //create action
                 $param=$segments;
-                                //echo 'controller which do now - '.$controllerName . "<br>";
-                    //echo 'action which do now - '.$actionName. "<br>". "<br>";
+//                    echo 'controller which do now - '.$controllerName . "<br>";
+//                    echo 'action which do now - '.$actionName. "<br>". "<br>";
 
                 //connection my controller
                 $controllerFile =ROOT. '/../app/controllers/' . $controllerName . '.php';
 
                 if (file_exists($controllerFile)) {
                     include_once($controllerFile);
+//                    echo' controller '.   $controllerFile .' was connection';
                 }else
                 {
                     echo '<br>'.'Vitali, u do not  include your controller, was some problem';
