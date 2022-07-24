@@ -7,5 +7,7 @@ return array(
     'about' => 'about/Index', //request => controller/action
     'goods' => 'goods/Goods',
     'main' => 'main/Main',
+    '/' => 'main/Main',
+    'contact' => 'contact/Contact',
 
 );
