@@ -24,17 +24,20 @@ class Goods
 
         $goodsList=array();
 
-        $stm='select id, title, description, footer from GoodsPage where id=1';
+        $stm='select id, name, breed, age, story, character_cat, soldi from GoodsPage where id<7';
 
         $result = $connection->query($stm);
 
         $i=0;
         while( $row =$result->fetch(PDO::FETCH_ASSOC))
         {
-            $aboutList[$i]['id']=$row['id'];
-            $aboutList[$i]['title']=$row['title'];
-            $aboutList[$i]['description']=$row['description'];
-            $aboutList[$i]['footer']=$row['footer'];
+            $goodsList[$i]['id']=$row['id'];
+            $goodsList[$i]['name']=$row['name'];
+            $goodsList[$i]['breed']=$row['breed'];
+            $goodsList[$i]['age']=$row['age'];
+            $goodsList[$i]['story']=$row['story'];
+            $goodsList[$i]['character_cat']=$row['character_cat'];
+            $goodsList[$i]['soldi']=$row['soldi'];
             $i++;
         }
         return $goodsList;

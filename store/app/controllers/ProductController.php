@@ -1,7 +1,7 @@
 <?php
 
 // check attach file
-$checkInclude = ROOT.'/../app/models/Main.php';
+$checkInclude = ROOT.'/../app/models/Product.php';
     if(file_exists($checkInclude))
     {
         include_once ($checkInclude);
@@ -16,7 +16,7 @@ $checkInclude = ROOT.'/../app/models/Main.php';
  * @author Vitali Romanenko
  */
 
-class MainController
+class ProductController
 {
     /**
      * return data about main page
