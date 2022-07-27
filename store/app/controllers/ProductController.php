@@ -18,30 +18,15 @@ $checkInclude = ROOT.'/../app/models/Product.php';
 
 class ProductController
 {
-    /**
-     * return data about main page
-     * @param
-     */
-    public function actionProduct()
-    {
-        $productList = array();
-        $productList = ProductPage::getProductPage();
-//        print_r( $productList);
-        require_once(ROOT . '/../app/views/product/index.php');
-
-        return true;
-    }
 
     /**
      * return data about every page any cats
      * @param
      */
-    public function actionName($id)
+    public function actionName($name)
     {
-
-        if ($id) {
-            $productId = ProductPage::getProductById($id);
-//print_r( $productId);
+        if ($name) {
+            $productName = ProductPage::getProductById($name);
             require_once(ROOT . '/../app/views/product/name.php');
 
             return true;

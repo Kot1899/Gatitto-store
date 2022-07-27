@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href='/css/style.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" >
-    <title>Cat store</title>
+    <title>gattino.Store</title>
 </head>
 <body>
 <?php require 'templates/header.html' ?>
