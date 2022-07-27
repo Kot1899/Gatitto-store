@@ -45,6 +45,7 @@ class Router
                 $controllerName = ucfirst($controllerName);
                 $actionName = 'action' . ucfirst(array_shift($segments)); //create action
                 $param=$segments;
+
 //                    echo 'controller which do now - '.$controllerName . "<br>";
 //                    echo 'action which do now - '.$actionName. "<br>". "<br>";
 
