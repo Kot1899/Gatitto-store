@@ -20,7 +20,7 @@
                     <h4 class="my-0 "><?php echo $value[ 'name' ];?></h4>
                 </div>
                 <div class="card-body">
-                    <img src="images/<?php echo $value[ 'name' ];?>.jpg" class="img-thumbnail">
+                    <img src="/images/<?php echo $value[ 'name' ];?>.jpg" class="img-thumbnail">
                     <ul class="fontMedium list-unstyled mt-3 mb-4">
                         <li>Breed     -  <?php echo $value[ 'breed' ];?></li>
                         <li>Age       - <?php echo $value[ 'age' ];?> month</li>

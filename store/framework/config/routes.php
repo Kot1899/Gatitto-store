@@ -9,7 +9,6 @@ return array(
     'main' => 'main/Main',
 //    '' => 'main/Main',
     'contact' => 'contact/Contact',
-//    'product/([a-z]+)' => 'product/Name/$1',
     'product/([0-9]+)' => 'product/Name/$1',
     'basket' => 'basket/Basket',
 );

@@ -17,14 +17,19 @@ class Goods
      * return list of news
      */
 
-    public static function getGoodsList()
+    const SHOW_BY_DEFAULT = 6;
+
+
+    public static function getGoodsList($count=self::SHOW_BY_DEFAULT)
     {
         //request to DB
         $connection= DataBase::getConnection();
 
         $goodsList=array();
 
-        $stm='select id, name, breed, age, story, character_cat, soldi from GoodsPage where id<7';
+
+        $stm='select id, name, breed, age, story, character_cat, soldi 
+              from GoodsPage limit '.$count ;
 
         $result = $connection->query($stm);
 
@@ -43,4 +48,5 @@ class Goods
         return $goodsList;
 
     }
+
 }

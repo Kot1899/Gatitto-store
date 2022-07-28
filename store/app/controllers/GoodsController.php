@@ -12,7 +12,7 @@ $checkInclude = ROOT.'/../app/models/Goods.php';
     }
 
 /**
- * return data about news
+ * return data  first page
  */
 class GoodsController
 {
@@ -22,6 +22,7 @@ class GoodsController
      */
     public function actionGoods()
     {
+
         $goodsList=array();
         $goodsList= Goods::getGoodsList();
 
@@ -29,5 +30,6 @@ class GoodsController
 
         return true;
     }
+
 }
 
