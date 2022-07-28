@@ -11,4 +11,10 @@ return array(
     'contact' => 'contact/Contact',
     'product/([0-9]+)' => 'product/Name/$1',
     'basket' => 'basket/Basket',
+    'account' => 'account/Index',
+
+
+    'user/registration' => 'user/registration',
+    'user/login' => 'user/login',
+    'user/logout' => 'user/logout',
 );
