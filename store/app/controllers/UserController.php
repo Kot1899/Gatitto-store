@@ -93,11 +93,11 @@ class UserController
             }
 
             //check if user is registered
-            $userrId = User::checkData($login, $password);
-            if ($userrId == false) {
+            $userId = User::checkData($login, $password);
+            if ($userId == false) {
                 $errors[] = 'Incorrect data';
             } else {
-                User::auth($userrId);
+                User::auth($userId);
                 header('location: /account');
             }
         }
@@ -105,4 +105,10 @@ class UserController
         return true;
     }
 
+    public function actionLogout()
+    {
+        session_start();
+        unset($_SESSION['user']);
+        header('location: /main');
+    }
 }

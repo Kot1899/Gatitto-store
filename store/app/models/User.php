@@ -146,6 +146,55 @@ class User
                 }
             return false;
     }
+    /**
+     * save Id new user
+     */
+    public static function auth($userId)
+    {
+        $_SESSION['user']=$userId;
+    }
 
+    /**
+     * check account
+     */
+    public static function checkAccount()
+    {
+        if(isset ($_SESSION['user']))
+        {
+            return $_SESSION['user'];
+        }
+        header('location: /user/login');
+    }
 
+    /**
+     * check account
+     */
+    public static function newUser()
+    {
+        if(isset ($_SESSION['user']))
+        {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * C
+     */
+    public static function getUserById($id)
+    {
+        if($id) {
+            //request to DB
+            $connection = DataBase::getConnection();
+
+            $stm = 'select * from registration where id=:id';
+            $result = $connection->prepare($stm);
+            $result->bindParam(':id', $id, 1);
+
+            $result->setFetchMode(2);
+            $result->execute();
+
+            return $result->fetch();
+        }
+    }
 }

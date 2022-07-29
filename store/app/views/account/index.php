@@ -11,7 +11,7 @@
 <?php require 'templates/header.html' ?>
 <main class="container px-3">
 
-<h1> hello world</h1>
+<h1> Hello <?php echo $user['name'];?> </h1>
 
 </main>
 <?php require 'templates/footer.html' ?>
