@@ -43,9 +43,9 @@
     right: -12%;
 }
 .img-product {
-    margin: 12px;
+    margin: 2px;
     position: absolute;
-    top: 10px;
+    top: 20px;
     right: 10px;
 }
 .img-basket{
@@ -169,4 +169,8 @@
     appearance: none;
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.p9-4 {
+    padding: 1.0rem !important;
 }

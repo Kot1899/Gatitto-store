@@ -10,7 +10,7 @@ return array(
 //    '' => 'main/Main',
     'contact' => 'contact/Contact',
     'product/([0-9]+)' => 'product/Name/$1',
-    'basket' => 'basket/Basket',
+    'cart' => 'cart/Cart',
     'account' => 'account/Index',
 
 
