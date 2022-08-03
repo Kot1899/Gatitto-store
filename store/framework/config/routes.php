@@ -6,6 +6,7 @@ return array(
 
     'about' => 'about/Index', //request => controller/action
     'goods' => 'goods/Goods',
+    'app' => 'app/App',
     'main' => 'main/Main',
 //    '' => 'main/Main',
     'contact' => 'contact/Contact',

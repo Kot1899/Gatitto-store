@@ -3,8 +3,7 @@ import App from "./App";
 
 
 const app = createApp({
-
 });
+app.component("app", App);
 
-// app.mount("#app");
-createApp(App).mount('#app')
+app.mount("#app");

@@ -4,9 +4,11 @@ const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
   mode: 'development',
   entry: './public/main.js',
+  // entry: './vue3-edu-store/src/main.js',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'public/js'),
+    // path: path.resolve(__dirname, 'vue3-edu-store/public/js'),
   },
   module: {
     rules: [

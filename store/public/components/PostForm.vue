@@ -10,16 +10,22 @@
              class="input"
              type="text" name="body"
              placeholder="body">
-      <button class="btn"
-              @click="createPost">
-              Creat
-      </button>
+      <my-button
+            class="btn"
+            style="align-self: flex-end"
+            @click="createPost">
+            Creat
+      </my-button>
          </form>
   </div>
 </template>
 
 <script>
+import MyButton from "./UI/MyButton";
 export default {
+  components: {
+    MyButton
+  },
   data(){
     return{
       post:{
@@ -56,14 +62,6 @@ export default {
 form{
   display: flex;
   flex-direction: column;
-}
-.btn{
-  align-self: end;
-  padding: 4px;
-  background: none;
-  color: teal;
-  border: 1px solid teal;
-  margin: 8px;
 }
 
 </style>
