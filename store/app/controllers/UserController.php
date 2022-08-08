@@ -1,84 +1,66 @@
 <?php
-// check attach file
-$checkInclude = ROOT.'/../app/models/User.php';
-if(file_exists($checkInclude))
-{
-    include_once ($checkInclude);
-}else
-{
-    echo '<br>'.'Vitali, file with modelAbout was 
-        not found and do not include'.'<br>';
-}
+
 class UserController
 {
     public function actionRegistration()
     {
-        $login='';
-        $password='';
-        $firstname='';
-        $email='';
-        $sex='';
-        $age='';
-        $result=false;
+        $login = '';
+        $password = '';
+        $firstname = '';
+        $email = '';
+        $sex = '';
+        $age = '';
+        $result = false;
 
-        //getting data from form POST method
-        if(isset($_POST['Submit']))
-        {
+           //getting data from form POST method
+        if (isset($_POST['Submit'])) {
             $login = $_POST['Login'];
             $password = $_POST['Password'];
             $firstname = $_POST['Name'];
             $email = $_POST['Email'];
             $sex = $_POST['Sex'];
             $age = intval($_POST['Age']);
-
-            $errors= array();
+            $errors = array();
 
             //check by errors
-            if(!User::checkPassword($password))
-                {
-                    $errors[]='Incorrect password';
-                }
-
-            if(!User::checkFirstname($firstname))
-            {
-                    $errors[]='Incorrect name';
+            if (!User::checkPassword($password)) {
+                    $errors[] = 'Incorrect password';
             }
 
-            if(!User::checkEmail($email))
-            {
-                    $errors[]='Incorrect email';
-            }
-            if(User::checkExistEmail($email))
-            {
-                $errors[]='Such email already exists';
+            if (!User::checkFirstname($firstname)) {
+                $errors[] = 'Incorrect name';
             }
 
-            if(!User::checkSex($sex))
-            {
-                    $errors[]='Incorrect sex';
+            if (!User::checkEmail($email)) {
+                $errors[] = 'Incorrect email';
+            }
+            if (User::checkExistEmail($email)) {
+                $errors[] = 'Such email already exists';
             }
 
-            if(!User::checkAge($age))
-                {
-                    $errors[]='Incorrect age';
+            if (!User::checkSex($sex)) {
+                $errors[] = 'Incorrect sex';
             }
-             if ($errors==false)
-             {
-                 $result=User::registration($login, $password, $firstname, $email, $sex, $age);
-             }
 
+            if (!User::checkAge($age)) {
+                $errors[] = 'Incorrect age';
+            }
+
+            if ($errors == false) {
+                $result = User::registration($login, $password, $firstname, $email, $sex, $age);
+            }
         }
-        require_once (ROOT.'/../app/views/user/registration.php');
+        require_once(ROOT . '/../app/views/user/registration.php');
         return true;
     }
 
     public function actionLogin()
     {
-        $login='';
-        $password='';
+        $login = '';
+        $password = '';
 
         //getting data from form POST method
-        if(isset($_POST['Submit'])) {
+        if (isset($_POST['Submit'])) {
             $login = $_POST['Login'];
             $password = $_POST['Password'];
             $errors = array();
@@ -101,7 +83,7 @@ class UserController
                 header('location: /account');
             }
         }
-        require_once (ROOT.'/../app/views/user/login.php');
+        require_once(ROOT . '/../app/views/user/login.php');
         return true;
     }
 

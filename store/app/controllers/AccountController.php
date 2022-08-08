@@ -1,26 +1,19 @@
 <?php
 
-// check attach file
-include_once (ROOT.'/../app/models/Account.php');
-include_once (ROOT.'/../app/models/User.php');
-
-
 /**
  * return data about users account
  */
 class AccountController
 {
-  public function actionIndex()
-  {
-      //get Id of user
-        $userId=User::checkAccount();
+    public function actionIndex()
+    {
+        //get Id of user
+        $userId = User::checkAccount();
 
-      //get all data about user which sign in
-        $user=User::getUserById($userId);
+        //get all data about user which sign in
+        $user = User::getUserById($userId);
 
-
-      require_once (ROOT.'/../app/views/account/index.php');
-
-      return true;
-  }
+        require_once(ROOT . '/../app/views/account/index.php');
+        return true;
+    }
 }

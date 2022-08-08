@@ -1,32 +1,16 @@
 <?php
 
-// check attach file
-$checkInclude = ROOT.'/../app/models/Contact.php';
-    if(file_exists($checkInclude))
-    {
-        include_once ($checkInclude);
-      }else
-    {
-        echo '<br>'.'Vitali, file with modelAbout was 
-        not found and do not include'.'<br>';
-    }
-
 /**
- * return data about news
+ * return data about сontacts of store
  */
 class ContactController
 {
     /**
-     * return data about news
-     * @param $contactList
+     * return data about сontacts of store
      */
-    public function actionContact()
+    public function actionContact(): void
     {
-        $contactList=array();
-        $contactList= Contact::getContactList();
-
-        require_once (ROOT.'/../app/views/contact/index.php');
-
-        return true;
+        $contactList = Contact::getContactList();
+        require_once(ROOT . '/../app/views/contact/index.php');
     }
 }

@@ -1,35 +1,18 @@
 <?php
 
-// check attach file
-$checkInclude = ROOT.'/../app/models/Goods.php';
-if(file_exists($checkInclude))
-{
-    include_once ($checkInclude);
-}else
-{
-    echo '<br>'.'Vitali, file with modelGoods was 
-        not found and do not include'.'<br>';
-}
-
 /**
- * return data  first page
+ * return data with my goods through VUE3
  */
 class AppController
 {
     /**
-     * return data about news
+     * return data about goods
      * @param
      */
     public function actionApp()
     {
-
-        $appList= json_encode(Goods::getGoodsList());
+        $appList = json_encode(Goods::getGoodsList(), JSON_THROW_ON_ERROR);
         header('Content-Type: application/json; charset=utf-8');
         echo $appList;
-
-
-//        return true;
     }
-
 }
-

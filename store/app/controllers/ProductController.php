@@ -1,34 +1,20 @@
 <?php
 
-// check attach file
-$checkInclude = ROOT.'/../app/models/Product.php';
-    if(file_exists($checkInclude))
-    {
-        include_once ($checkInclude);
-    }else
-    {
-        echo '<br>'.'Vitali, file with modelMain was 
-            not found and do not include'.'<br>';
-    }
-
 /**
- * return data about main page
+ * return data about product page
  * @author Vitali Romanenko
  */
 
 class ProductController
 {
-
     /**
      * return data about every page any cats
      * @param
      */
-    public function actionName($name)
+    public function actionIndex($id)
     {
-        if ($name) {
-            $productName = ProductPage::getProductById($name);
-            require_once(ROOT . '/../app/views/product/name.php');
-
+        if ($id) {
+            require_once(ROOT . '/../app/views/product/index.php');
             return true;
         }
     }

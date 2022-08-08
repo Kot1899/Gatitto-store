@@ -2,40 +2,38 @@ const path = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 
 module.exports = {
-  mode: 'development',
-  entry: './public/main.js',
-  // entry: './vue3-edu-store/src/main.js',
-  output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, 'public/js'),
-    // path: path.resolve(__dirname, 'vue3-edu-store/public/js'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader',
+    mode: 'development',
+    entry: './app/vue/main.js',
+    output: {
+        filename: '[name].js',
+        path: path.resolve(__dirname, './public/js'),
+    },
+    module: {
+        rules: [
+        {
+            test: /\.vue$/,
+            loader: 'vue-loader',
+        },
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+        },
+        {
+            test: /\.css$/,
+            use: [
+            'vue-style-loader',
+            'css-loader',
+            ],
+        },
         ],
-      },
-    ],
-  },
-  plugins: [
+    },
+    plugins: [
     new VueLoaderPlugin(),
-  ],
-  resolve: {
-    extensions: ['.js', '.vue'],
-    alias: {
-      'vue$': 'vue/dist/vue.esm-browser.js'
+    ],
+    resolve: {
+        extensions: ['.js', '.vue'],
+        alias: {
+            'vue$': 'vue/dist/vue.esm-browser.js'
+        }
     }
-  }
 };
